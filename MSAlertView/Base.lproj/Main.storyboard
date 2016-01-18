@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="14F1509" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="BT1-id-xNL">
+                                <rect key="frame" x="65.5" y="381" width="470" height="30"/>
+                                <color key="backgroundColor" red="0.34509803919999998" green="0.25882352939999997" blue="0.17254901959999999" alpha="0.72999999999999998" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Sign In">
+                                    <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="btnShowAlertTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="elD-CU-KaS"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Your session has been expired.To continue please login again.Else your cart items will be discarded" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="obx-pG-SnZ">
+                                <rect key="frame" x="15" y="246.5" width="570" height="107"/>
+                                <fontDescription key="fontDescription" name="Avenir-Book" family="Avenir" pointSize="26"/>
+                                <color key="textColor" red="0.21960784310000001" green="0.37254901959999998" blue="0.39607843139999999" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="warning" translatesAutoresizingMaskIntoConstraints="NO" id="UmE-gD-Mv7">
+                                <rect key="frame" x="283.5" y="205.5" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="UmE-gD-Mv7" secondAttribute="height" multiplier="1:1" id="BXx-q1-J7q"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Review your cart purchases" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n7W-Rj-Qer">
+                                <rect key="frame" x="216.5" y="426" width="167.5" height="19.5"/>
+                                <fontDescription key="fontDescription" name="Avenir-Light" family="Avenir" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qOk-fx-Lwa">
+                                <rect key="frame" x="284" y="475" width="33" height="33"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="qOk-fx-Lwa" secondAttribute="height" multiplier="1:1" id="7k6-ZO-5ku"/>
+                                </constraints>
+                                <state key="normal" image="shpngcart"/>
+                                <connections>
+                                    <action selector="showShoppingCart:" destination="BYZ-38-t0r" eventType="touchUpInside" id="xUd-r1-l2S"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="BT1-id-xNL" firstAttribute="centerX" secondItem="obx-pG-SnZ" secondAttribute="centerX" id="247-tk-PRB"/>
+                            <constraint firstItem="n7W-Rj-Qer" firstAttribute="top" secondItem="BT1-id-xNL" secondAttribute="bottom" constant="15" id="2y3-Sn-iNW"/>
+                            <constraint firstItem="obx-pG-SnZ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="3Xk-rR-7bb"/>
+                            <constraint firstItem="BT1-id-xNL" firstAttribute="width" secondItem="obx-pG-SnZ" secondAttribute="width" constant="-100" id="4wE-BD-7gy"/>
+                            <constraint firstItem="qOk-fx-Lwa" firstAttribute="centerX" secondItem="n7W-Rj-Qer" secondAttribute="centerX" id="8EI-to-QKJ"/>
+                            <constraint firstItem="BT1-id-xNL" firstAttribute="top" secondItem="obx-pG-SnZ" secondAttribute="bottom" constant="27" id="8z0-K2-kd9"/>
+                            <constraint firstItem="qOk-fx-Lwa" firstAttribute="top" secondItem="n7W-Rj-Qer" secondAttribute="bottom" constant="29.5" id="Bkj-Ir-5GY"/>
+                            <constraint firstItem="obx-pG-SnZ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HUW-Su-kCk"/>
+                            <constraint firstItem="obx-pG-SnZ" firstAttribute="top" secondItem="UmE-gD-Mv7" secondAttribute="bottom" constant="8.5" id="UIq-Dj-kyA"/>
+                            <constraint firstItem="n7W-Rj-Qer" firstAttribute="centerX" secondItem="BT1-id-xNL" secondAttribute="centerX" id="jHu-Mq-hu3"/>
+                            <constraint firstItem="UmE-gD-Mv7" firstAttribute="centerX" secondItem="obx-pG-SnZ" secondAttribute="centerX" id="krv-fy-XwB"/>
+                            <constraint firstItem="obx-pG-SnZ" firstAttribute="width" secondItem="8bC-Xf-vdC" secondAttribute="width" constant="-30" id="z1j-Ie-LxP"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="324" y="-101"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="shpngcart" width="33" height="33"/>
+        <image name="warning" width="33" height="33"/>
+    </resources>
+</document>
